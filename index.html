@@ -1,0 +1,198 @@
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=M PLUS Rounded 1c'>
+        <title>Snake Game</title>
+        <style>
+
+            *{
+                padding: 0;
+                margin: 0;
+            }
+            #up{
+                text-decoration: none;
+                margin-top: -3rem;
+                font-family: 'M PLUS Rounded 1c';
+                color: black;
+                font-size: 1rem;
+            }
+
+            #autom{
+                text-decoration: none;
+                margin-left: 3rem;
+                margin-top: -3rem;
+                float: left;
+                color: white;
+                padding: .5rem 1rem;
+                background-color: rgb(4, 207, 207);
+                border-radius: .5rem;
+                transition: all .5s;
+                font-family: 'M PLUS Rounded 1c';
+                font-size: 1.5rem;
+            }
+            #autom:hover{
+                background-color: rgb(47, 168, 168);
+            }
+            .u-centre{
+                padding-top: 1.5rem;
+                text-align: center;
+                font-family: 'Aclonica';
+            }
+            .score{
+                padding-left: 5rem;
+                font-size: 1.5rem;
+                font-weight: 700;
+                text-transform: uppercase;
+                font-family: 'Sofia';
+            }
+            .canvas{
+                display: block;
+                margin: 0 auto;
+                background-image: linear-gradient(to right bottom, rgb(80, 214, 203), rgb(0, 255, 242));
+                width: 30%;
+                box-shadow: rgb(0, 0, 0) 0rem .5rem 2rem;
+                border: .5rem solid rgb(7, 230, 100);
+                border-radius: .5rem;
+            }
+            .button{
+                width: 100%;
+                text-align: center;
+            }
+            .middle{
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                width: 100%;
+                margin:0, auto;
+                background-color: rgba(32, 14, 15, 0.854);
+                transition: all 1s;
+            }
+            .game-over{
+                text-align: center;
+                vertical-align: middle;
+                display: inline-block;
+                margin: auto;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 8rem;
+                color: white;
+            }
+            .text{
+                text-align: center;
+                vertical-align: middle;
+                font-family: 'M PLUS Rounded 1c';
+
+            }
+            .text1{
+                font-size: 0rem;
+
+            }
+            #text3{
+                font-size: 3rem ;
+                text-transform: uppercase;
+                font-family: 'Sofia';
+            }
+            @media (max-width: 1000px) {
+                .canvas {
+                    width: 40% ;
+                    padding: .1rem;
+                }
+            }
+            @media (max-width: 800px) {
+                .canvas {
+                    width: 55% ;
+                    padding: .1rem;
+                }
+            }
+            @media (max-width: 700px) {
+                .canvas {
+                    width: 70% ;
+                    padding: .1rem;
+                }
+                #autom{
+                    margin-left: .5rem;
+                }
+            }
+            @media (max-width: 650px) {
+                .canvas {
+                    width: 80% ;
+                    padding: .1rem;
+                }
+                #autom{
+                    margin-left:0.2rem;
+                    font-size: .8rem;
+                    padding: .25rem .65rem;
+                    border-radius: 4px;
+                }
+            }
+            @media (max-width: 500px) {
+                .canvas {
+                    width: 90% ;
+                    padding: .1rem;
+                }
+            }
+            @media (max-width: 450px) {
+                .canvas {
+                    width: 95% ;
+                    padding: .1rem;
+                }
+            }
+            .body,
+            .wrapper {
+  /* Break the flow */
+  position: absolute;
+  top: 0px;
+
+  /* Give them all the available space */
+  width: 100%;
+  height: 100%;
+
+  /* Remove the margins if any */
+  margin: 0;
+
+  /* Allow them to scroll down the document */
+  overflow-y: hidden;
+}
+
+.body {
+  /* Sending body at the bottom of the stack */
+  z-index: 1;
+}
+
+.wrapper {
+  /* Making the wrapper stack above the body */
+  z-index: 2;
+  overscroll-behavior: none
+}
+        </style>
+    </head>
+    <body class="body">
+        <div class="wrapper">
+            <p class="score" id="score">Score: </p>
+            
+            <br>
+            <canvas id="canvas" class="canvas" height="500" width="500"></canvas>
+            <div id="middle"><div id="game-over"><p id="text" class="text1">Game Over <p id="text3"></p></p></div></div>
+            <div class="u-centre"><p>You can control speed of snake by the buttons below</p></div>
+            
+            <div class="button">
+                <a href="#" id="up"><img src="up-arrow-png-27162.png" width="48" alt=""></a>
+                <br>
+                <a href="#" id="down"><img src="up-arrow-png-27162 - Copy.png" width="48" alt=""></a>
+            </div>
+        <a href="#" id="autom">Automous</a>
+            
+        
+          </div>
+
+        <script src="testd.js"></script>
+    </body>
+    
+</html>
